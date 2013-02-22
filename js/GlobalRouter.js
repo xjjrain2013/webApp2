@@ -4,7 +4,8 @@ define(function() {
 			'': 'index'
 		},
 		index: function() {
-			this.navigate('global-stage/star-panel', true);
+			console.log('global router index...');
+			this.navigate('global-stage/newspaper-panel', true);
 		}
 	});
 	return GlobalRouter;

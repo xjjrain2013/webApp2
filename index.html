@@ -19,13 +19,16 @@ target-densitydpi: 屏幕像素;
 <title>无标题文档</title>
 <link href="./css/reset.css" type="text/css" rel="stylesheet">
 <link href="./css/base.css" type="text/css" rel="stylesheet">
-<script type="text/javascript" src="./js/libs/require.js" data-main="./js/app" id="requirejsnode"></script>
+<script type="text/javascript" src="./js/libs/require.js" data-main="./js/main" id="requirejsnode"></script>
 <!--script type="text/javascript" src="./js/lib/zepto.js"></script>
 <script type="text/javascript" src="./js/plugin/flip.js"></script>
 <script type="text/javascript" src="./js/plugin/iscroll.js"></script>
 <script src="./js/plugin/swipe.js"></script-->
 </head>
 <body>
+<script type = "text/template" id = "per-panels">
+<img src="<%= imgSrc %>">
+</script>
 <script type = "text/template" id = "star-panels">
 	<section class="page" >
 	<nav class="nav_bar style1">
@@ -34,28 +37,23 @@ target-densitydpi: 屏幕像素;
 	<div class="right"><a href="list.html" class="button style_black">设置</a></div>
 	</nav>
 	<article id="slides">
-	<ul>
-	<% _.each(model.get('panelImg'), function(currentImg, index){ %>
-		<li data-num = "<%= index %>"><img src="<%= currentImg %>"></li>
-	<% }); %>
+	<ul class = "newspapers">
+	
 
 	</ul>
 	</article>
 	<footer></footer>
 	</section>
 </script>
-<script type = "text/template" id = "article-list">
-	<% _.each(model.get('articleList'), function(curPost, index) { %>
-		<li data-num = "<%= curIndex %>-<%= index %>">
-			<div class="img"><img src="<%= curPost.thumbnail %>" alt="图片"></div>
-			<div class="info"><h2><%= curPost.title %></h2><p><%= curPost.content.substr(0, 20) %></p></div>
-		</li>
-
-	<% });%>
+<script type = "text/template" id = "post-list-item">
 	
+	<a href = "javascript:void(0);">
+		<div class="img"><img src="<%= thumbnail %>" alt="图片"></div>
+		<div class="info"><h2><%= title %></h2><p><%= content.substr(0, 20) %></p></div>
+	</a>
 </script>
-<script type = "text/template" id = "article-lists">
-<article class = "article-list-panels">
+<script type = "text/template" id = "post-lists">
+<article class = "post-list-panels">
 	<section class="page">
 	<nav class="nav_bar style1">
 	<div class="left"><a href="javascript:void(0);" class="button style_black">返回</a></div>
