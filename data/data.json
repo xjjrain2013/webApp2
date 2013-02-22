@@ -1,0 +1,21 @@
+{
+	"data" : [{
+			"id" : "1",
+			"title" : "图片1",
+			"img" : "http://img3.cache.netease.com/photo/0001/2013-01-06/900x600_8KINNQ9C568L0001.jpg"
+		}, {
+			"id" : "2",
+			"title" : "图片2",
+			"img" : "http://img3.cache.netease.com/photo/0001/2012-12-29/900x600_8JRTVAIJ19BR0001.jpg"
+		}, {
+			"id" : "3",
+			"title" : "图片3",
+			"img" : "http://img3.cache.netease.com/photo/0001/2012-12-29/900x600_8JRUT0TA19BR0001.jpg"
+		}, {
+			"id" : "4",
+			"title" : "图片4",
+			"img" : "http://img3.cache.netease.com/photo/0001/2012-12-29/900x600_8JRUKRFO19BR0001.jpg"
+		}
+	],
+	"status" : "1"
+}

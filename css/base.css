@@ -1,0 +1,278 @@
+html{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+body{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+section {
+	width: 100%;
+	height: 100%;
+	overflow:hidden;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	background-color: #1BA1E2;
+	background-image: url(../img/grid_5.png);
+}
+section > footer {
+	width: 100%;
+	height: 48px;
+	background-color: #222;
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#999), to(#222), color-stop(0.02, #666));
+	border-top: 1px solid #444;
+}
+/******************************************
+ *Home
+******************************************
+/*
+红色：E51400
+绿色：339933
+蓝色：1BA1E2
+橙色：F09609
+草绿：8CBF26
+湖蓝：00ABA9
+洋红：FF0097
+粉色：E671B8
+棕色：996600
+紫色：A200FF
+*/
+#home {
+	z-index : 10;
+}
+#home .main1 {
+	background-color: #1BA1E2;
+	background-image: url(../img/grid_5.png);
+}
+#home .main2 {
+	background-size: 50px 50px;
+	background-color: #0AE;
+	background-image: -webkit-linear-gradient(rgba(255, 255, 255, .2) 50%, transparent 50%, transparent);
+	background-image: linear-gradient(rgba(255, 255, 255, .2) 50%, transparent 50%, transparent);
+}
+/******************************************
+ *navigation
+******************************************/
+.nav_bar {
+	padding: 0 10px;
+	height: 50px;
+	background-color: #ac2fa2;
+	display: -webkit-box;
+	-webkit-box-align: center;
+	-webkit-box-pack: center;
+	position: relative;
+	z-index: 10;
+}
+.nav_bar.style1 {
+	border-color: #99004c;
+	background-image: -webkit-linear-gradient(top, #c0005e , #9a004c);
+	box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.2),0 1px 10px rgba(0, 0, 0, 0.3);
+}
+.nav_bar.style_black {
+	border-color: #252525;
+	background-image: -webkit-linear-gradient(top, #222222, #111111);
+}
+.nav_bar > .left {
+	width: 35%;
+	text-align: left;
+}
+.nav_bar > .center {
+	-webkit-box-flex: 1;
+}
+.nav_bar > .right {
+	width: 35%;
+	text-align: right;
+}
+/******************************************
+ *logo
+******************************************/
+.logo {
+	text-align: center;
+	font-size: 28px;
+	line-height: 28px;
+	color: #fff;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+/******************************************
+ *slides
+******************************************/
+#slides {
+	width: 100%;
+	-webkit-box-flex: 1;
+	display: -webkit-box;
+	position: relative;
+}
+#slides > ul {
+	display: -webkit-box;
+	margin: 0px;
+	padding: 0px;
+	-webkit-backface-visibility: hidden;
+	-webkit-transform-style: preserve-3d;
+	-webkit-transition: 0ms;
+}
+#slides > ul > li {
+	width: 480px;
+	overflow: hidden;
+	-webkit-backface-visibility: hidden;
+	-webkit-transform-style: preserve-3d;
+	display: -webkit-box;
+	-webkit-box-align:center;
+	-webkit-box-pack:center;
+	-webkit-backface-visibility: hidden;
+	-webkit-transform-style: preserve-3d;
+}
+#slides > ul > li > img {
+	max-width: 75%;
+	height: auto;
+	-webkit-backface-visibility: hidden;
+	-webkit-transform-style: preserve-3d;
+	background-color: rgba(255, 255, 255, 0.3);
+	border-radius: 3px;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+	padding: 10px;
+	display: block;
+}
+/******************************************
+ *button
+******************************************/
+.button {
+	text-decoration: none;
+	color: #000;
+	display: -webkit-inline-box;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	padding: 8px 15px;
+	line-height: 18px;
+	font-size: 16px;
+}
+.button.style_black {
+	color: #fff;
+	border-color: rgba(0, 0, 0, 0.2);
+	background-image: -webkit-linear-gradient(top,rgba(255, 255, 255, 0.1),rgba(0, 0, 0, 0.1));
+	box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.13), 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+/******************************************
+ *banner
+******************************************/
+.banner {
+	width: 100%;
+	height: 150px;
+	overflow: hidden;
+}
+.banner img {
+	width: 100%;
+	height: 100%;
+}
+/******************************************
+ *list
+******************************************/
+#list {
+	background-color: #eee;
+	-webkit-box-flex: 1;
+	overflow: auto;
+}
+#list > a, #list > li {
+	height: 100px;
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #CCC;
+	overflow: hidden;
+	padding: 20px 15px;
+	display: -webkit-box;
+	text-decoration: none;
+}
+#list > a > .img {
+	width: 120px;
+	height: 90px;
+	border: 1px solid #ddd;
+	padding: 5px;
+	background-color: #FFF;
+}
+#list > a > .info {
+	-webkit-box-flex: 1;
+	margin-left: 15px;
+}
+#list > a > .info > h2 {
+	line-height: 1em;
+	font-size: 24px;
+	color: #000;
+	font-weight: bold;
+	padding-top: 3px;
+}
+#list > a > .info > p {
+	line-height: 1.5em;
+	font-size: 20px;
+	color: #999;
+	margin-top: 12px;
+}
+/******************************************
+ *article
+******************************************/
+#article {
+	-webkit-box-flex: 1;
+	background-color: #eee;
+	overflow: auto;
+	font-size: 1.6875em;
+	line-height: 145%;
+}
+#article > .title{
+	padding: 1em;
+	font-weight: bold;
+	border-bottom: 1px solid #CCC;
+	text-align: left;
+	color: #000;
+}
+#article > .content{
+	margin: 1em;
+	color: #666;
+	overflow-x: hidden;
+}
+#article > .content > p{
+	text-indent: 2em;
+	margin-bottom: 1em;
+}
+
+
+/**add by xjj**/
+.viewport {
+  position: relative;
+  overflow: hidden;
+  height:100%;
+}
+.viewport > * {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.viewport > *:not(.active) {
+  display: none;
+}
+
+body.stage > article {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.panel {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+}
+
+.panel > article {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}

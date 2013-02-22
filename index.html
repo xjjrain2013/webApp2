@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi">
+<!--viewport-->
+<!--
+user-scalable：用户是否可以手动缩放;
+initial-scale：初始缩放比例，也即是当页面第一次 load 的时候缩放比例;
+maximum-scale：允许用户缩放到的最大比例;
+minimum-scale：允许用户缩放到的最小比;
+width：控制viewport的大小，可以指定的一个值，device-width为设备的宽度;
+height：和 width 相对应，指定高度;
+target-densitydpi: 屏幕像素;
+-->
+<meta name="format-detection" content="telephone=no;address=no;email=no">
+<!--format_detection-->
+<!--该标签用于指定是否将网页内容中的元素显示为超链接-->
+<meta charset="utf-8">
+<title>无标题文档</title>
+<link href="./css/reset.css" type="text/css" rel="stylesheet">
+<link href="./css/base.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="./js/libs/require.js" data-main="./js/app" id="requirejsnode"></script>
+<!--script type="text/javascript" src="./js/lib/zepto.js"></script>
+<script type="text/javascript" src="./js/plugin/flip.js"></script>
+<script type="text/javascript" src="./js/plugin/iscroll.js"></script>
+<script src="./js/plugin/swipe.js"></script-->
+</head>
+<body>
+<script type = "text/template" id = "star-panels">
+	<section class="page" >
+	<nav class="nav_bar style1">
+	<div class="left"><a href="http://cubiq.org/dropbox/SwipeView/demo/gallery/" class="button style_black">往期</a></div>
+	<div class="center"><div class="logo">星周刊</div></div>
+	<div class="right"><a href="list.html" class="button style_black">设置</a></div>
+	</nav>
+	<article id="slides">
+	<ul>
+	<% _.each(model.get('panelImg'), function(currentImg, index){ %>
+		<li data-num = "<%= index %>"><img src="<%= currentImg %>"></li>
+	<% }); %>
+
+	</ul>
+	</article>
+	<footer></footer>
+	</section>
+</script>
+<script type = "text/template" id = "article-list">
+	<% _.each(model.get('articleList'), function(curPost, index) { %>
+		<li data-num = "<%= curIndex %>-<%= index %>">
+			<div class="img"><img src="<%= curPost.thumbnail %>" alt="图片"></div>
+			<div class="info"><h2><%= curPost.title %></h2><p><%= curPost.content.substr(0, 20) %></p></div>
+		</li>
+
+	<% });%>
+	
+</script>
+<script type = "text/template" id = "article-lists">
+<article class = "article-list-panels">
+	<section class="page">
+	<nav class="nav_bar style1">
+	<div class="left"><a href="javascript:void(0);" class="button style_black">返回</a></div>
+	<div class="center"><div class="logo">星周刊</div></div>
+	<div class="right"></div>
+	</nav>
+	<article id="list">
+	<div class="banner"><img src="img/list/banner.png" alt="图片"></div>
+	<div class = "items">
+
+	</div>
+	
+	</article>
+	</section>
+</article>
+</script>
+<script type = "text/template" id = "article-contents">
+	<section class="page">
+	<nav class="nav_bar style1">
+	<div class="left"><a href="javascript:void(0);" class="button style_black">返回</a></div>
+	<div class="center">
+	<div class="logo"></div>
+	</div>
+	<div class="right"></div>
+	</nav>
+	<article id="article">
+	<div class="title"><%= post.title %></div>
+	<div class="content">
+	<p align="center"><img src="http://img6.cache.netease.com/ent/2013/2/17/2013021701283680ac5.jpg" alt="赵忠祥与郑渊洁（资料图）"><br>
+	赵忠祥与郑渊洁（资料图）</p>
+	<%= post.content %>
+	</div>
+	</article>
+	</section>
+</script>
+</body>
+</html>
+<!--script type="text/javascript">
+var myScroll;
+function loaded() {
+	setTimeout(function() {
+	//Css3Flip("#slides ul");
+		var myScroll = new iScroll('slides', {
+			snap: 'li',
+			momentum: false,
+			hScroll: true,
+			vScroll: false,
+			hScrollbar: false,
+			vScrollbar: false
+		});
+	},
+	5000);
+}
+window.addEventListener('load', loaded, false);
+</script-->
