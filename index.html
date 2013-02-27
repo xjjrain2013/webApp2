@@ -47,13 +47,11 @@ target-densitydpi: 屏幕像素;
 </script>
 <script type = "text/template" id = "post-list-item">
 	
-	<a href = "javascript:void(0);">
-		<div class="img"><img src="<%= thumbnail %>" alt="图片"></div>
-		<div class="info"><h2><%= title %></h2><p><%= content.substr(0, 20) %></p></div>
-	</a>
+		<div class="img"><img src="<%= model.get('thumbnail') %>" alt="图片"></div>
+		<div class="info"><h2><%= model.get('title') %></h2><p><%= model.get('content').substr(0, 20) %></p></div>
 </script>
 <script type = "text/template" id = "post-lists">
-<article class = "post-list-panels">
+
 	<section class="page">
 	<nav class="nav_bar style1">
 	<div class="left"><a href="javascript:void(0);" class="button style_black">返回</a></div>
@@ -68,7 +66,7 @@ target-densitydpi: 屏幕像素;
 	
 	</article>
 	</section>
-</article>
+
 </script>
 <script type = "text/template" id = "article-contents">
 	<section class="page">
@@ -80,11 +78,11 @@ target-densitydpi: 屏幕像素;
 	<div class="right"></div>
 	</nav>
 	<article id="article">
-	<div class="title"><%= post.title %></div>
+	<div class="title"><%= title %></div>
 	<div class="content">
-	<p align="center"><img src="http://img6.cache.netease.com/ent/2013/2/17/2013021701283680ac5.jpg" alt="赵忠祥与郑渊洁（资料图）"><br>
-	赵忠祥与郑渊洁（资料图）</p>
-	<%= post.content %>
+	<p align="center"><img src="<%= featureImg %>" alt="<%= title %>"><br>
+	</p>
+	<%= content %>
 	</div>
 	</article>
 	</section>

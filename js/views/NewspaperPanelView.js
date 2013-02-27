@@ -18,10 +18,10 @@ define([
 			'click ul.newspapers li': 'goPostList'
 		},
 		initialize: function(options) {
-			console.log('NewspaperPanelView init...');
 			_.bindAll(this);
-			//this.postlist = null;
 			this.globalStage = options.globalStage;
+			//记录对就的列表视图
+			this.postListView = null;
 			this.render();
 		},
 		addAll: function() {
@@ -37,35 +37,9 @@ define([
 			this.addAll();
 			return this;
 		},
-		goPostList:function(event) {
+		goPostList: function(event) {
 			var num = $(event.currentTarget).data('num');
-			if(!this.hasLoadingData) {
-				console.log("num: " + num);
-				var postCollection = new PostCollection({num: num});
-				postCollection.fetch({
-					success: function() {
-						console.log('loading postlist' + num + '\'s data success....');
-					},
-					error: function() {
-						console.log('loading postlist' + num + '\'s data error....');
-					}
-				});
-
-				var postlist = new PostListView({
-					name: 'postlist-' + num,
-					collection: postCollection,
-					curNum: num,
-					stage: this.stage
-				});
-				postlist.addTransition(up_down);
-				postlist.routePanel(function(trans) {
-					postlist.$el.children().hide();
-					postlist.active({trans: trans || 'right'});
-				});
-				this.hasLoadingData = true; 
-			}
-			this.stage.router.navigate('global-stage/postlist-' + num + '/trans-left', true);
-
+			this.stage.router.navigate('global-stage/postlist-' + num + '/trans-right', true);
 		}
 	});
 
